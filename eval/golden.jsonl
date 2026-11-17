@@ -1,0 +1,20 @@
+{"id": "paper-memory", "doc": "research_paper.pdf", "question": "By how much does ASA reduce peak GPU memory, and on what input length?", "must_include": ["63%", "32k"], "pages": [1, 2]}
+{"id": "paper-datasets", "doc": "research_paper.pdf", "question": "Which datasets was Adaptive Sparse Attention evaluated on?", "must_include": ["LongDocQA", "PolicyQA-Long", "ManualBench"], "pages": [2]}
+{"id": "paper-results", "doc": "research_paper.pdf", "question": "What exact match score did ASA get on LongDocQA compared with full attention?", "must_include": ["43.6", "41.2"], "pages": [2]}
+{"id": "paper-ablation", "doc": "research_paper.pdf", "question": "What happens to EM if the budget controller is removed?", "must_include": ["1.7"], "pages": [2]}
+{"id": "paper-limitations", "doc": "research_paper.pdf", "question": "Summarise the limitations section of the ASA paper.", "must_include": ["English", "64k"], "pages": [2]}
+{"id": "manual-prefilter", "doc": "product_manual.pdf", "question": "How often should the sediment pre-filter be replaced?", "must_include": ["6 months"], "pages": [2]}
+{"id": "manual-red-light", "doc": "product_manual.pdf", "question": "What does a flashing red light on the AquaPure mean and what should I do?", "must_include": ["leak"], "pages": [1]}
+{"id": "manual-reset", "doc": "product_manual.pdf", "question": "How do I reset the filter indicator after changing a cartridge?", "must_include": ["5 seconds"], "pages": [2]}
+{"id": "manual-pressure", "doc": "product_manual.pdf", "question": "What water pressure range does the filtration system support?", "must_include": ["1.4", "6.2"], "pages": [1, 2]}
+{"id": "manual-warranty", "doc": "product_manual.pdf", "question": "How long is the warranty and how can it be extended?", "must_include": ["2 years", "3 years"], "pages": [2]}
+{"id": "manual-low-flow", "doc": "product_manual.pdf", "question": "The water flow is very low. What is the likely cause?", "must_include": ["PF-1"], "pages": [2]}
+{"id": "contract-convenience", "doc": "service_contract.pdf", "question": "Can the customer terminate the agreement early for convenience? What notice is required?", "must_include": ["60 days"], "pages": [2]}
+{"id": "contract-liability", "doc": "service_contract.pdf", "question": "What is the cap on each party's liability?", "must_include": ["12 months"], "pages": [2]}
+{"id": "contract-law", "doc": "service_contract.pdf", "question": "Which law governs the services agreement?", "must_include": ["England and Wales"], "pages": [2]}
+{"id": "contract-sev1", "doc": "service_contract.pdf", "question": "How quickly must the supplier respond to a Severity 1 incident?", "must_include": ["1 hour"], "pages": [1]}
+{"id": "contract-breach", "doc": "service_contract.pdf", "question": "Within how many hours must a personal data breach be reported?", "must_include": ["48 hours"], "pages": [1]}
+{"id": "contract-fee", "doc": "service_contract.pdf", "question": "What is the annual subscription fee and how is it invoiced?", "must_include": ["84,000", "quarterly"], "pages": [1]}
+{"id": "cross-durations", "doc": null, "question": "Compare the AquaPure warranty period with the initial term of the software services agreement.", "must_include": ["2 years", "36 months"], "pages": [], "multi_doc": ["product_manual.pdf", "service_contract.pdf"]}
+{"id": "unanswerable-salary", "doc": null, "question": "What is the salary of Kestrel Ridge Software's chief executive?", "must_include": [], "pages": [], "answerable": false}
+{"id": "unanswerable-gpu", "doc": null, "question": "Which GPU model was used to train ASA?", "must_include": [], "pages": [], "answerable": false}

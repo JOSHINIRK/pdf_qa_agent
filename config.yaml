@@ -1,0 +1,45 @@
+# ---------------------------------------------------------------------------
+# Settings for the PDF Q&A agent. Every module reads them through
+# pdfagent/config.py. Any key can be overridden with an environment variable
+# named PDFQA_<KEY IN UPPER CASE>, for example PDFQA_CHAT_MODEL=gpt-4.1.
+# ---------------------------------------------------------------------------
+
+# Where the vector index, parsed documents and uploaded PDFs are stored.
+data_dir: data
+
+# ChromaDB collection that holds the chunk vectors.
+collection_name: pdf_chunks
+
+# OpenAI embedding model. Changing it requires re-ingesting every document:
+#   python scripts/ingest.py --reset samples/*.pdf
+embedding_model: text-embedding-3-small
+
+# OpenAI chat model that runs the agent. It must support tool (function) calling.
+chat_model: gpt-4.1-mini
+
+# Low temperature = consistent, factual answers. Reasoning models (o-series,
+# gpt-5 family) reject this parameter: set it to null for those.
+temperature: 0.1
+
+# Upper limit on the length of one model reply, in tokens.
+max_answer_tokens: 1500
+
+# --- Chunking (tokens). Changing these requires re-ingesting. ---------------
+chunk_tokens: 400          # maximum size of one chunk's body text
+chunk_overlap_tokens: 60   # trailing sentences repeated at the start of the next chunk
+
+# --- Retrieval ---------------------------------------------------------------
+search_top_k: 6            # passages returned by one search tool call
+search_candidates: 30      # candidates taken from each of vector and keyword search before fusion
+
+# --- Agent -------------------------------------------------------------------
+agent_max_steps: 8             # maximum model calls per question (tool rounds + final answer)
+max_tool_result_tokens: 4000   # a tool result is trimmed to this size before it reaches the model
+history_turns: 4               # earlier question/answer pairs sent with a follow-up question
+
+# --- Limits ------------------------------------------------------------------
+max_upload_mb: 50
+max_pages: 1000
+request_timeout_s: 90      # timeout for one OpenAI request, in seconds
+
+log_level: INFO

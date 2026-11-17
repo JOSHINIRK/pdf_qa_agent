@@ -1,0 +1,9 @@
+[server]
+maxUploadSize = 50        # MB; keep in line with max_upload_mb in config.yaml
+headless = true
+
+[browser]
+gatherUsageStats = false
+
+[theme]
+base = "light"

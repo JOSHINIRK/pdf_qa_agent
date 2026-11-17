@@ -1,0 +1,14 @@
+[project]
+name = "pdf-qa-agent"
+version = "1.0.0"
+description = "LLM agent that reads PDFs, breaks them into sections and answers questions with page-level citations"
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+filterwarnings = ["ignore::DeprecationWarning"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"

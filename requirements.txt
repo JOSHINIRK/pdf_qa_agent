@@ -1,0 +1,15 @@
+openai>=1.40,<4          # OpenAI API: embeddings + chat with function calling
+pymupdf>=1.24            # PDF text, fonts, bookmarks and page rendering
+chromadb>=0.5            # Local persistent vector database
+rank-bm25>=0.2.2         # Keyword (BM25) half of hybrid search
+tiktoken>=0.7            # Token counting for chunk sizes
+streamlit>=1.40          # Web UI (segmented_control needs 1.40+)
+pyyaml>=6.0              # config.yaml
+python-dotenv>=1.0       # Loads OPENAI_API_KEY from .env
+pytest>=8.0              # Offline test suite
+
+# Pinned for Windows Smart App Control: it blocks the DLLs of some brand-new
+# compiled builds on this laptop; these releases are known to load.
+pydantic==2.12.*
+pandas==2.3.*
+kubernetes<37
